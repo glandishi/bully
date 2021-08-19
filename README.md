@@ -1,1 +1,1 @@
-# bully[README.md](https://github.com/glandishi/bully/files/7017273/README.md)
+Trying to recreate old MS-DOS game with a python and to add more RPG elements
