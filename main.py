@@ -375,7 +375,7 @@ class Person(object):
 				if self.weapons.values()[i][0] == 'w':
 					print(pnt('sel', "+%d%s:DMG:%d-%d,Effects:%s,Shortcut:%s") % (
 					self.weapons.values()[i][7], self.weapons.values()[i][1], self.weapons.values()[i][4],
-					self.weapons.values()[i][5], self.weapons.values()[i][3], self.list(weapons)[i]))
+					self.weapons.values()[i][5], self.weapons.values()[i][3], list(self.weapons)[i]))
 		print("Clothing and stuff (type a - armor; p - pants; h - hat; s - shoes):")
 		if self.items == {}:
 			print("empty")
@@ -384,15 +384,15 @@ class Person(object):
 				if type(self.items.values()[i]) is list:
 					print(pnt('sel', "%s:DEF:%d,Effects:%s,Shortcut:%s,Type:%s") % (
 					self.items.values()[i][1], self.items.values()[i][4], self.items.values()[i][3],
-					self.list(items)[i], self.items.values()[i][0]))
+					list(self.items)[i], self.items.values()[i][0]))
 				else:
-					print(pnt('ital', "%s" % self.list(items)[i] + ":%d" % self.items.values()[i]))
+					print(pnt('ital', "%s" % list(self.items)[i] + ":%d" % self.items.values()[i]))
 		print("Consumables:")
 		if self.consumable == {}:
 			return "empty"
 		else:
 			for i in range(len(self.consumable)):
-				print(pnt('sel', "%s:%d") % (self.list(consumable)[i], self.consumable.values()[i]))
+				print(pnt('sel', "%s:%d") % (list(self.consumable)[i], self.consumable.values()[i]))
 		return ""
 
 
