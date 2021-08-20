@@ -1,5 +1,5 @@
 import random, sys, os, time, inspect
-import fight
+from brawl import *
 
 
 class Person(object):
